@@ -45,13 +45,17 @@ public class InventoryPage
         return int.Parse(driver.FindElement(cartBadge).Text);
     }
 
-    public bool IsBackpackRemoveButtonDisplayed()
-    {
-        return driver.FindElement(removeBackpackButton).Displayed;
-    }
-
     public bool IsCartBadgeDisplayed()
     {
         return driver.FindElements(cartBadge).Count > 0;
+    }
+
+    public void OpenCart()
+    {
+        driver.FindElement(shoppingCartLink).Click();
+    }
+    public bool IsBackpackRemoveButtonDisplayed()
+    {
+        return driver.FindElement(removeBackpackButton).Displayed;
     }
 }

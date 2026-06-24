@@ -1,4 +1,5 @@
 using OpenQA.Selenium;
+using ECommerceTestAutomation.Tests.Utilities;
 
 namespace ECommerceTestAutomation.Tests.Pages;
 
@@ -23,9 +24,9 @@ public class LoginPage
 
     public void LoginAs(string username, string password)
     {
-        driver.FindElement(usernameInput).SendKeys(username);
-        driver.FindElement(passwordInput).SendKeys(password);
-        driver.FindElement(loginButton).Click();
+        WaitHelper.WaitUntilVisible(driver, usernameInput).SendKeys(username);
+        WaitHelper.WaitUntilVisible(driver, passwordInput).SendKeys(password);
+        WaitHelper.WaitUntilClickable(driver, loginButton).Click();
     }
 
     public string GetErrorMessage()

@@ -16,7 +16,6 @@ C:\Users\kuike\OneDrive\Documents\GitHub\csharp-selenium-ecommerce-tests\ECommer
 C:\Users\kuike\OneDrive\Documents\GitHub\csharp-selenium-ecommerce-tests\ECommerceTestAutomation.Tests\bin\Debug\net10.0\ECommerceTestAutomation.Tests.runtimeconfig.json
 C:\Users\kuike\OneDrive\Documents\GitHub\csharp-selenium-ecommerce-tests\ECommerceTestAutomation.Tests\bin\Debug\net10.0\ECommerceTestAutomation.Tests.dll
 C:\Users\kuike\OneDrive\Documents\GitHub\csharp-selenium-ecommerce-tests\ECommerceTestAutomation.Tests\bin\Debug\net10.0\ECommerceTestAutomation.Tests.pdb
-C:\Users\kuike\OneDrive\Documents\GitHub\csharp-selenium-ecommerce-tests\ECommerceTestAutomation.Tests\bin\Debug\net10.0\SeleniumExtras.WaitHelpers.dll
 C:\Users\kuike\OneDrive\Documents\GitHub\csharp-selenium-ecommerce-tests\ECommerceTestAutomation.Tests\bin\Debug\net10.0\Microsoft.ApplicationInsights.dll
 C:\Users\kuike\OneDrive\Documents\GitHub\csharp-selenium-ecommerce-tests\ECommerceTestAutomation.Tests\bin\Debug\net10.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Users\kuike\OneDrive\Documents\GitHub\csharp-selenium-ecommerce-tests\ECommerceTestAutomation.Tests\bin\Debug\net10.0\Microsoft.Testing.Extensions.Telemetry.dll
