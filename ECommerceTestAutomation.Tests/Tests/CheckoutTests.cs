@@ -23,8 +23,32 @@ public class CheckoutTests : BaseTest
         cartPage.ClickCheckout();
 
         checkoutPage.EnterCustomerInformation("Kenneth", "Kui", "M1A 1A1");
+        checkoutPage.ClickContinue();
         checkoutPage.FinishCheckout();
 
         Assert.That(checkoutPage.GetConfirmationMessage(), Is.EqualTo("Thank you for your order!"));
+    }
+
+    [Test]
+    public void Checkout_WithMissingFirstName_ShowsErrorMessage()
+    {
+        var loginPage = new LoginPage(driver);
+        var inventoryPage = new InventoryPage(driver);
+        var cartPage = new CartPage(driver);
+        var checkoutPage = new CheckoutPage(driver);
+
+        loginPage.NavigateToLoginPage();
+        loginPage.LoginAs("standard_user", "secret_sauce");
+
+        inventoryPage.AddBackpackToCart();
+        inventoryPage.OpenCart();
+
+        cartPage.ClickCheckout();
+
+        checkoutPage.EnterCustomerInformation("", "Kui", "M1A 1A1");
+        checkoutPage.ClickContinue();
+        // checkoutPage.FinishCheckout();
+
+        Assert.That(checkoutPage.GetErrorMessage(), Does.Contain("Error: First Name is required"));
     }
 }

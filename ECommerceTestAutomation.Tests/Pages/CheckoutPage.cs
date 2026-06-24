@@ -12,6 +12,7 @@ public class CheckoutPage
     private readonly By continueButton = By.Id("continue");
     private readonly By finishButton = By.Id("finish");
     private readonly By confirmationHeader = By.ClassName("complete-header");
+    private readonly By errorMessage = By.CssSelector("[data-test='error']");
 
     public CheckoutPage(IWebDriver driver)
     {
@@ -23,7 +24,6 @@ public class CheckoutPage
         driver.FindElement(firstNameInput).SendKeys(firstName);
         driver.FindElement(lastNameInput).SendKeys(lastName);
         driver.FindElement(postalCodeInput).SendKeys(postalCode);
-        WaitHelper.WaitUntilClickable(driver, continueButton).Click();
     }
 
     public void FinishCheckout()
@@ -34,5 +34,15 @@ public class CheckoutPage
     public string GetConfirmationMessage()
     {
         return WaitHelper.WaitUntilVisible(driver, confirmationHeader).Text;
+    }
+
+    public void ClickContinue()
+    {
+        WaitHelper.WaitUntilClickable(driver, continueButton).Click();
+    }
+
+    public string GetErrorMessage()
+    {
+        return WaitHelper.WaitUntilVisible(driver, errorMessage).Text;
     }
 }

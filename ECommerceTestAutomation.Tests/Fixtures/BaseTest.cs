@@ -11,7 +11,18 @@ public class BaseTest
     [SetUp]
     public void SetUp()
     {
-        driver = new ChromeDriver();
+        var options = new ChromeOptions();
+
+        options.AddUserProfilePreference("credentials_enable_service", false);
+        options.AddUserProfilePreference("profile.password_manager_enabled", false);
+        options.AddUserProfilePreference("profile.password_manager_leak_detection", false);
+
+        options.AddArgument("--disable-save-password-bubble");
+        options.AddArgument("--disable-features=PasswordLeakDetection,PasswordManagerOnboarding,PasswordCheck");
+        options.AddArgument("--disable-notifications");
+        options.AddArgument("--incognito");
+
+        driver = new ChromeDriver(options);
         driver.Manage().Window.Maximize();
     }
 
