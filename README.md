@@ -1,5 +1,7 @@
 # C# Selenium E-Commerce Test Automation Suite
 
+[![.NET Selenium Tests](https://github.com/Ky1286/csharp-selenium-ecommerce-tests/actions/workflows/dotnet-tests.yml/badge.svg)](https://github.com/Ky1286/csharp-selenium-ecommerce-tests/actions/workflows/dotnet-tests.yml)
+
 This project is a UI test automation suite for a demo e-commerce application using C#, Selenium WebDriver, NUnit, and the Page Object Model pattern.
 
 ## Tech Stack
